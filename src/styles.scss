@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.basic-info {
+  cursor: pointer;
+  outline: 2px solid transparent;
+
+  &:hover {
+    background: rgba(0, 0, 0, .2);
+    outline: 2px dotted black;
+  }
+}
