@@ -1,32 +1,52 @@
 <div class="max-w-[7in] min-h-[9.25in] pt-[.6in] ps-[.6in] pe-[.5in] pb-[.67in] bg-white shadow mx-auto">
-  @switch (template) {
+  @switch (template()) {
     @case (ResumeTemplate.Tehran) {
       <template-tehran>
-        <section-name [data]="data?.name"/>
-        <section-position [data]="data?.position"/>
-        <section-email [data]="data?.email"/>
-        <section-phone [data]="data?.phone"/>
-        <section-location [data]="data?.location"/>
-        <section-social [data]="data?.social"/>
+        <section-name [data]="data()?.name"/>
+        <section-position [data]="data()?.position"/>
+        <section-email [data]="data()?.email"/>
+        <section-phone [data]="data()?.phone"/>
+        <section-location [data]="data()?.location"/>
+        <section-social [data]="data()?.social"/>
       </template-tehran>
     }
     @case (ResumeTemplate.Karaj) {
       <template-karaj>
-        <section-name [data]="data?.name"/>
-        <section-position [data]="data?.position"/>
-        <section-email [data]="data?.email"/>
-        <section-phone [data]="data?.phone"/>
-        <section-location [data]="data?.location"/>
-        <section-social [data]="data?.social"/>
+        <section-name [data]="data()?.name"/>
+        <section-position [data]="data()?.position"/>
+        <section-email [data]="data()?.email"/>
+        <section-phone [data]="data()?.phone"/>
+        <section-location [data]="data()?.location"/>
+        <section-social [data]="data()?.social"/>
       </template-karaj>
+    }
+    @case (ResumeTemplate.Rasht) {
+      <template-rasht>
+        <section-name [data]="data()?.name"/>
+        <section-position [data]="data()?.position"/>
+        <section-email [data]="data()?.email"/>
+        <section-phone [data]="data()?.phone"/>
+        <section-location [data]="data()?.location"/>
+        <section-social [data]="data()?.social"/>
+      </template-rasht>
+    }
+    @case (ResumeTemplate.Shiraz) {
+      <app-template-shiraz>
+        <section-name [data]="data()?.name"/>
+        <section-position [data]="data()?.position"/>
+        <section-email [data]="data()?.email"/>
+        <section-phone [data]="data()?.phone"/>
+        <section-location [data]="data()?.location"/>
+        <section-social [data]="data()?.social"/>
+      </app-template-shiraz>
     }
   }
 </div>
 <!--<ng-template #DATA>-->
-<!--  <section-name [data]="data?.name"/>-->
-<!--  <section-position [data]="data?.position"/>-->
-<!--  <section-email [data]="data?.email"/>-->
-<!--  <section-phone [data]="data?.phone"/>-->
-<!--  <section-location [data]="data?.location"/>-->
-<!--  <section-social [data]="data?.social"/>-->
+<!--  <section-name [data]="data()?.name"/>-->
+<!--  <section-position [data]="data()?.position"/>-->
+<!--  <section-email [data]="data()?.email"/>-->
+<!--  <section-phone [data]="data()?.phone"/>-->
+<!--  <section-location [data]="data()?.location"/>-->
+<!--  <section-social [data]="data()?.social"/>-->
 <!--</ng-template>-->

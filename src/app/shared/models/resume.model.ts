@@ -1,6 +1,8 @@
 export enum ResumeTemplate {
   Tehran = 'tehran',
   Karaj = 'karaj',
+  Rasht = 'rasht',
+  Shiraz = 'shiraz',
 }
 
 export type ResumeSocial = Partial<{

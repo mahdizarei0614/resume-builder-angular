@@ -1,0 +1,19 @@
+<div class="p-4">
+  <button (click)="openModal()">
+    Select Template
+    <modal-container [opened]="themeModalOpened()" (close)="closeModal();">
+      <div class="p-4 grid grid-cols-4 gap-4">
+        @for (template of ResumeTemplate | keyvalue; track template.key) {
+          <label [for]="template.key"
+                 class="h-16 w-12 md:w-20 md:h-20 gap-0 md:gap-2 text-slate-300 has-[:checked]:ring-slate-50 has-[:checked]:font-bold has-[:checked]:text-slate-50 has-[:checked]:bg-slate-100/[.5] flex flex-col items-center justify-center rounded-lg p-2 ring-2 ring-transparent hover:bg-slate-100/[.2] transition-colors cursor-pointer">
+            {{ (template.value + ' template') | capitalizeFirstLetters }}
+            <input name="template-selection" [id]="template.key"
+                   class="invisible absolute"
+                   [checked]="selectedTemplate() === template.value"
+                   type="radio" (click)="templateChanged.emit(template.value)">
+          </label>
+        }
+      </div>
+    </modal-container>
+  </button>
+</div>

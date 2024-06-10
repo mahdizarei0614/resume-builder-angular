@@ -1,0 +1,13 @@
+<div class="basic-info">
+  <div class="flex justify-between items-stretch border-t-8 border-black">
+    <div class="items-start py-2">
+      <ng-content select="section-name"/>
+      <ng-content select="section-position"/>
+    </div>
+    <div class="ps-2 py-2 border-s-4 gap-1.5 border-black flex flex-col items-start justify-between">
+      <ng-content select="section-email"/>
+      <ng-content select="section-phone"/>
+      <ng-content select="section-location"/>
+    </div>
+  </div>
+</div>

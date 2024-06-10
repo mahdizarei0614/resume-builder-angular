@@ -1,3 +1,4 @@
-<div class="bg-slate-700 p-4 md:p-8 w-full min-h-dvh">
-  <resume-paper />
+<div class="bg-slate-800 p-4 md:p-8 w-full min-h-dvh flex gap-2">
+  <resume-paper [template]="template()"/>
+  <tools-container [selectedTemplate]="template()" (templateChanged)="template.set($event)"/>
 </div>
